@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "Windows"; /* Name of the font */
+    src: url('/fonts/windows-xp-tahoma.otf') format('truetype'); /* Path to the font file */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url('/images/windows.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; 
+}
+
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(26, 87, 255); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    height: 40px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4), inset 0px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+#popup-content {
+    background: linear-gradient(to bottom, #e0e0e0, #c0c0c0); /* Gradient background for a vintage look */
+    padding: 20px;
+    border: 2px solid #808080; /* Dark gray border */
+    border-radius: 0; /* No border radius for a boxy look */
+    box-shadow: inset 2px 2px 0px #ffffff, inset -2px -2px 0px #808080; /* Beveled edges */
+    font-family: "Tahoma", sans-serif; /* Classic Windows font */
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    width: 300px; /* Fixed width for a dialog box feel */
+}
+
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: visible; /* Initially visible */
+    opacity: 1;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#close-popup {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: linear-gradient(to bottom, #f0f0f0, #d0d0d0); /* Button gradient */
+    color: black;
+    border: 1px solid #808080; /* Dark gray border */
+    border-radius: 0; /* No border radius */
+    cursor: pointer;
+    font-family: "Tahoma", sans-serif;
+    font-size: 12px;
+    box-shadow: inset 1px 1px 0px #ffffff, inset -1px -1px 0px #808080; /* Beveled button edges */
+}
+
+#close-popup:hover {
+    background: linear-gradient(to bottom, #d0d0d0, #f0f0f0); /* Reverse gradient on hover */
+}
+
+/* Hides the popup when the hidden class is added */
+#popup.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+#explorer{
+    position: fixed;
+    top: 4%;
+    left: 3%;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+    transform: scale(0.35); /* Scale up the content */
+    transform-origin: top left; /* Set the origin for scaling */
+    font-family: "Windows", sans-serif; /* Classic Windows font */
+    font-size: 50px;
+    color: white;
+}
+

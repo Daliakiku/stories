@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "Windows"; /* Name of the font */
+    src: url('/fonts/windows-xp-tahoma.otf') format('truetype'); /* Path to the font file */
+}
+
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Windows", sans-serif; /* Use the Windows font for all elements */
+    overflow:scroll;
+}
+
+html, body {
+    height: 100%;
+}
+
+
+/* Add a gray outline around the entire page */
+body {
+    font-family: "Tahoma", sans-serif; /* Classic Windows XP font */
+    background-color: #0000FF; /* Bright blue background */
+    color: yellow; /* Yellow text */
+    font-size: 25 px;
+    line-height: 1.5;
+    padding: 20px;
+    height: 100%;
+
+    /* Add the gray outline */
+    border: 10px solid #C0C0C0; /* Light gray border */
+    box-shadow: inset 3px 3px 0px #FFFFFF, inset -3px -3px 0px #808080; /* Beveled edges */
+}
+
+/* Ensure the container stretches to fit the content */
+#container {
+    display: flex;
+    flex-direction: row; /* Stack content vertically */
+    min-height: 100%; /* Ensure it stretches to fit the content */
+    font-size: large;
+    color: white;
+}
+
+/* Sidebar styling */
+#sidebar {
+    width: 200px;
+    background-color: #000080; /* Dark blue */
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    padding: 20px; /* Add margin to create space between the sidebar and the gray outline */
+    margin: 10 px; /* Center the sidebar vertically */
+    overflow: auto;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar li {
+    margin-bottom: 15px;
+}
+
+#sidebar a {
+    display: flex;
+    flex-direction: column; /* Stack the image and text vertically */
+    align-items: center; /* Center the image and text */
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center; /* Center-align the text */
+    margin-bottom: 15px; /* Add spacing between links */
+    text-decoration: underline;
+}
+
+#sidebar a:hover {
+    text-decoration: underline;
+    color: yellow; /* Change text color on hover */
+}
+
+.sidebar-icon {
+    width: 60px; /* Adjust the size of the icons */
+    height: 60px;
+    margin-bottom: 5px; /* Add spacing between the image and the text */
+}
+
+/* Main content styling */
+#main-content {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+#main-content h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#main-content h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#shimono-image {
+    width: 300px;
+    border: 2px solid #808080; /* Gray border for vintage look */
+    box-shadow: inset 2px 2px 0px #ffffff, inset -2px -2px 0px #808080; /* Beveled edges */
+}
+
