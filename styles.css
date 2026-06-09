@@ -16,7 +16,7 @@ html, body {
 }
 
 body {
-    background-image: url('/images/windows.jpg'); /* Replace with the path to your image */
+    background-image: url('./images/windows.jpg'); /* Replace with the path to your image */
     background-size: cover; /* Ensures the image covers the entire background */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center; 
